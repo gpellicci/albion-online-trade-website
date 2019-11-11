@@ -1,0 +1,32 @@
+@media (min-width:992px) {
+  .col-lg-4 {
+    -ms-flex:0 0 100%;
+    flex:0 0 100%;
+    max-width:100%;
+  }
+}
+
+@media (min-width:768px) {
+  .col-md-5 {
+    -ms-flex:0 0 100%;
+    flex:0 0 100%;
+    max-width:100%;
+  }
+}
+
+.row {
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-wrap:wrap;
+  flex-wrap:wrap;
+  margin-right:-15px;
+  margin-left:-15px;
+  margin-bottom:40px;
+}
+
+@media (min-width:576px) {
+  .clean-block .block-heading {
+    padding-top:120px;
+  }
+}
+

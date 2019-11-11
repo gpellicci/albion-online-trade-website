@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AO-trade</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/css/Image_center.css">
+    <link rel="stylesheet" href="assets/css/SBWP-Search-Bar-With-Parameters.css">
+    <link rel="stylesheet" href="assets/css/untitled-1.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="index.html">Albion online trade</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="search.html">search</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="sell.html">sell</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="my-items.html">My items</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="recently_added.html">New items</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                </ul><button id="login" class="btn btn-primary ml-auto" type="button" onclick="location.href='https://discordapp.com/api/oauth2/authorize?client_id=628944784739926046&redirect_uri=https%3A%2F%2Falbion-trade.com%2Findex.html&response_type=token&scope=identify';">Login</button></div>
+        </div>
+    </nav>
+    <main class="page">
+        <section class="clean-block features">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Place buy order</h2>
+                    <p>Put buy orders for items, other users will contact you.<br><br>Items will remain listed for one week.<br><br>Default quantity is 1 if not specified.<br></p>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="clean-block add-on newsletter-sign-up">
+                            <h2>List!</h2><input type="text" placeholder="Item" id="dropdown" class="form-control">
+                            <select id="tier" class="form-control">
+                                <option value="" selected disable hidden>Tier</option> 
+                                <option value="1">Tier 1</option>
+                                <option value="2">Tier 2</option>
+                                <option value="3">Tier 3</option>
+                                <option value="4">Tier 4</option>
+                                <option value="5">Tier 5</option>
+                                <option value="6">Tier 6</option>
+                                <option value="7">Tier 7</option>
+                                <option value="8">Tier 8</option>
+                            </select>
+                            <select id="enchant" class="form-control">
+                                <option value="" selected disable hidden>Enchant</option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <select id="quality" class="form-control">
+                                <option value="" selected disable hidden>Quality</option>
+                                <option value="1">Normal</option>
+                                <option value="2">Good</option>
+                                <option value="3">Outstanding</option>
+                                <option value="4">Excellent</option>
+                                <option value="5">Masterpiece</option>
+                            </select>                            
+                            <input type="number" placeholder="Quantity" id="quantity" class="form-control" style="min-width: 0;" autocomplete="off">
+                            <select id="city" class="form-control">
+                                <option value="All city" selected disable>All city</option>
+                                <option value="Royal city only">Royal city only</option>
+                                <option value="Caerleon">Caerleon</option>
+                                <option value="Martlock">Martlock</option>
+                                <option value="Bridgewatch">Bridgewatch</option>
+                                <option value="Lymhurst">Lymhurst</option>
+                                <option value="Thetford">Thetford</option>
+                                <option value="Fort Sterling">Fort Sterling</option>
+                            </select>
+                            <button class="btn btn-outline-primary resetBtn" type="button" id="reset_search">↺</button>
+                        </div>
+                        <div>
+                            <input type="number" placeholder="Price" id="price" class="form-control" style="max-width:20%;margin:auto;">
+                        </div>
+                        <div class="clean-block add-on newsletter-sign-up"><button class="btn btn-outline-primary" type="button" id="sell">&nbsp;Buy order&nbsp;</button></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col"><img id="search-preview" class="center"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="footer-copyright">
+            <p>This site is fan-made and not affiliated with Sandbox Interactive in any way.<br>For info contact us |&nbsp;<a href="#" id="logout">Logout</a><br></p>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/SBWP-Search-Bar-With-Parameters.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>    
+    <script src="js/detect_discord_identity.js?6"></script>
+    <script src="js/counterplusplus.js?6"></script>
+    <script src="js/logout.js?6"></script>
+    <script src="js/buyorder_list_dropdown.js?6"></script>
+    
+
+</body>
+
+</html>
